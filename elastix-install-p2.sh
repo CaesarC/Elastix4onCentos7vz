@@ -6,9 +6,9 @@ sed -i 's/\(^SELINUX=\).*/\SELINUX=disabled/' /etc/selinux/config
 systemctl enable elastix-firstboot
 /etc/rc.d/init.d/elastix-firstboot start
 echo "Now we are running some cleanup, and making sure everything is up to date"
-rm -rf /etc/yum.repos.d/elastix-cd.repo /mnt/iso/ Elastix-4.0.74-Stable-x86_64-bin-10Feb2016.iso
+#rm -rf /etc/yum.repos.d/elastix-cd.repo /mnt/iso/ Elastix-4.0.74-Stable-x86_64-bin-10Feb2016.iso
 mv /etc/yum.repos.d/elastix.repo.rpmnew /etc/yum.repos.d/elastix.repo
-yum clean all
+#yum clean all
 yum -y update
 echo " "
 echo " "
